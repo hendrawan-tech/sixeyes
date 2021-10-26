@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PermissionController;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,10 @@ use App\Http\Controllers\PermissionController;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/storage/link', function () {
+    Artisan::call('storage:link');
 });
 
 Auth::routes();
