@@ -27,7 +27,7 @@ class PostUpdateRequest extends FormRequest
             'title' => ['required', 'max:255', 'string'],
             'slug' => ['required', 'max:255', 'string'],
             'image' => ['nullable', 'image', 'max:1024'],
-            'description' => ['required', 'max:255', 'string'],
+            'description' => ['required', 'string'],
             'user_id' => ['required', 'exists:users,id'],
             'category_id' => ['required', 'exists:categories,id'],
         ];

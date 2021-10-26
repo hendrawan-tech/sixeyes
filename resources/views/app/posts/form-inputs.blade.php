@@ -68,7 +68,6 @@
         <x-inputs.textarea
             name="description"
             label="Description"
-            maxlength="255"
             required
             >{{ old('description', ($editing ? $post->description : ''))
             }}</x-inputs.textarea
